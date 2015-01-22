@@ -1,6 +1,6 @@
 <?php
 
-namespace Flotz\Bundle\TxtLocalBundle\Service;
+namespace Flotz\TxtLocalBundle\Service;
 
 use Symfony\Component\HttpKernel\Kernel;
 

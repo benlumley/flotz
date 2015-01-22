@@ -1,6 +1,6 @@
 <?php
 
-namespace Flotz\Bundle\TxtLocalBundle\DependencyInjection;
+namespace Flotz\TxtLocalBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
