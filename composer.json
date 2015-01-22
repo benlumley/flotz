@@ -16,6 +16,6 @@
         }
     ],
     "autoload": {
-        "psr-0": { "": "src\\Flotz" }
+        "psr-0": { "": "src/" }
     }
 }
