@@ -23,10 +23,12 @@ class Configuration implements ConfigurationInterface
         $rootNode
             ->children()
                 ->arrayNode('txtlocal')
-                    ->scalarNode('username')->isRequired()->cannotBeEmpty()->end()
-                    ->scalarNode('hash')->isRequired()->cannotBeEmpty()->end()
-                    ->scalarNode('apiKey')->defaultFalse()->end()
-                    ->scalarNode('test')->defaultFalse()->end()
+                    ->children()
+                        ->scalarNode('username')->isRequired()->cannotBeEmpty()->end()
+                        ->scalarNode('hash')->isRequired()->cannotBeEmpty()->end()
+                        ->scalarNode('apiKey')->defaultFalse()->end()
+                        ->scalarNode('test')->defaultFalse()->end()
+                    ->end()
                 ->end()
             ->end()
         ;
