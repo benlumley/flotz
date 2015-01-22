@@ -18,11 +18,25 @@ class Configuration implements ConfigurationInterface
     public function getConfigTreeBuilder()
     {
         $treeBuilder = new TreeBuilder();
-        $rootNode = $treeBuilder->root('flotz_txt_local');
+        $rootNode = $treeBuilder->root('flotz_txtlocal');
 
-        // Here you should define the parameters that are allowed to
-        // configure your bundle. See the documentation linked above for
-        // more information on that topic.
+        $rootNode
+            ->children()
+                ->scalarNode('username')
+                    ->isRequired()
+                    ->cannotBeEmpty()
+                ->end()
+                ->scalarNode('hash')
+                    ->isRequired()
+                    ->cannotBeEmpty()
+                ->end()
+                ->scalarNode('apiKey')
+                    ->defaultFalse()
+                ->end()
+                ->scalarNode('test')
+                    ->defaultFalse()
+                ->end()
+            ->end();
 
         return $treeBuilder;
     }

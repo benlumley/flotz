@@ -1,3 +1,0 @@
-flotz_txt_local_homepage:
-    path:     /hello/{name}
-    defaults: { _controller: FlotzTxtLocalBundle:Default:index }

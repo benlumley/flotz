@@ -24,5 +24,11 @@ class FlotzTxtLocalExtension extends Extension
 
         $loader = new Loader\YamlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
         $loader->load('services.yml');
+
+        foreach (array('username', 'hash', 'apiKey', 'test') as $attribute) {
+            if (isset($config[$attribute])) {
+                $container->setParameter('flotz_txtlocal_'.$attribute, $config[$attribute]);
+            }
+        }
     }
 }

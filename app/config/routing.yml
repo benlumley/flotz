@@ -1,7 +1,0 @@
-flotz_txt_local:
-    resource: "@FlotzTxtLocalBundle/Resources/config/routing.yml"
-    prefix:   /
-
-app:
-    resource: @AppBundle/Controller/
-    type:     annotation
