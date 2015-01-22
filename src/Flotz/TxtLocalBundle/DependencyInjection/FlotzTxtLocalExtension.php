@@ -27,7 +27,7 @@ class FlotzTxtLocalExtension extends Extension
 
         foreach (array('username', 'hash', 'apiKey', 'test') as $attribute) {
             if (isset($config[$attribute])) {
-                $container->setParameter('flotz_txtlocal_'.$attribute, $config[$attribute]);
+                $container->setParameter('flotz_txt_local_'.$attribute, $config[$attribute]);
             }
         }
     }

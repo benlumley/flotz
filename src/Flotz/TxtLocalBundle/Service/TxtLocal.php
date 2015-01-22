@@ -4,7 +4,7 @@ namespace Flotz\TxtLocalBundle\Service;
 
 use Symfony\Component\HttpKernel\Kernel;
 
-use Flotz\lib\Textlocal;
+use Flotz\lib\textlocal;
 
 class TxtLocal
 {
@@ -12,12 +12,13 @@ class TxtLocal
 
     public function __construct(Kernel $kernel)
     {
-        $username = $kernel->getContainer()->getParameter('flotz_txtlocal_username');
-        $hash = $kernel->getContainer()->getParameter('flotz_txtlocal_hash');
-        $apiKey = $kernel->getContainer()->getParameter('flotz_txtlocal_apiKey');
-        $this->test = $kernel->getContainer()->getParameter('flotz_txtlocal_test');
+        $container  = $kernel->getContainer();
+        $username   = $container->getParameter('flotz_txt_local_username');
+        $hash       = $container->getParameter('flotz_txt_local_hash');
+        $apiKey     = $container->getParameter('flotz_txt_local_apiKey');
+        $this->test = $container->getParameter('flotz_txt_local_test');
 
-        $this->txtLocal = new Textlocal($username, $hash, $apiKey);
+        $this->txtLocal = new textlocal($username, $hash, $apiKey);
     }
 
     public function sendSms($numbers, $message, $sender)

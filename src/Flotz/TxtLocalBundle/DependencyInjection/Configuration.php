@@ -18,20 +18,15 @@ class Configuration implements ConfigurationInterface
     public function getConfigTreeBuilder()
     {
         $treeBuilder = new TreeBuilder();
-        $rootNode = $treeBuilder->root('flotz', 'array');
+        $rootNode = $treeBuilder->root('flotz_txt_local');
 
         $rootNode
             ->children()
-                ->arrayNode('txtlocal')
-                    ->children()
-                        ->scalarNode('username')->isRequired()->cannotBeEmpty()->end()
-                        ->scalarNode('hash')->isRequired()->cannotBeEmpty()->end()
-                        ->scalarNode('apiKey')->defaultFalse()->end()
-                        ->scalarNode('test')->defaultFalse()->end()
-                    ->end()
-                ->end()
-            ->end()
-        ;
+                ->scalarNode('username')->isRequired()->cannotBeEmpty()->end()
+                ->scalarNode('hash')->isRequired()->cannotBeEmpty()->end()
+                ->scalarNode('apiKey')->defaultFalse()->end()
+                ->scalarNode('test')->defaultFalse()->end()
+            ->end();
 
         return $treeBuilder;
     }
