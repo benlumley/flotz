@@ -25,7 +25,7 @@ class Configuration implements ConfigurationInterface
                 ->scalarNode('username')->isRequired()->cannotBeEmpty()->end()
                 ->scalarNode('hash')->isRequired()->cannotBeEmpty()->end()
                 ->scalarNode('apiKey')->defaultFalse()->end()
-                ->scalarNode('test')->defaultFalse()->end()
+                ->scalarNode('test')->defaultTrue()->end()
             ->end();
 
         return $treeBuilder;
