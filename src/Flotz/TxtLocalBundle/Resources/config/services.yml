@@ -1,7 +1,6 @@
-#parameters:
-#    flotz_txt_local:
-#        username: your@email.com
-#        hash: "your hash here"
+#flotz_txt_local:
+#    username: your@email.com
+#    hash: "your hash here"
 
 services:
     flotz_txtlocal:
