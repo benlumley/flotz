@@ -2,7 +2,7 @@
     "name": "flotz/txtlocal",
     "type": "symfony-bundle",
     "description": "Wrapper for TxtLocal.co.uk",
-    "keywords": ["textlocal txtlocal"],
+    "keywords": ["textlocal", "txtlocal", "symfony", "php", "sms", "symfony bundle", "bundle"],
     "version": "1.0.0",
     "license": "MIT",
     "require": {
