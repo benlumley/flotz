@@ -4,7 +4,7 @@ namespace Flotz\TxtLocalBundle\Service;
 
 use Symfony\Component\HttpKernel\Kernel;
 
-use Flotz\lib\textlocal;
+use Flotz\lib\Textlocal;
 
 class TxtLocal
 {
