@@ -18,7 +18,7 @@ class TxtLocal
         $apiKey     = $container->getParameter('flotz_txt_local_apiKey');
         $this->test = $container->getParameter('flotz_txt_local_test');
 
-        $this->txtLocal = new textlocal($username, $hash, $apiKey);
+        $this->txtLocal = new Textlocal($username, $hash, $apiKey);
     }
 
     /**
