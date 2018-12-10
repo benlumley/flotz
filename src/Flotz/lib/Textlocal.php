@@ -43,7 +43,9 @@ class Textlocal {
 		$this->username = $username;
 		$this->hash = $hash;
         if($apiKey)
-        {$this->apiKey = $hash;}
+        {
+        	$this->apiKey = $apiKey;
+        }
 
 	}
 
@@ -59,11 +61,10 @@ class Textlocal {
 	{
         if($this->apiKey && !empty($this->apiKey)){
             $params['apiKey'] = $this->apiKey;
-
+        } else{
+        	$params['hash'] = $this->hash;
+        	$params['username'] = $this->username;
         }
-        else{$params['hash'] = $this->hash;}
-		// Create request string
-		$params['username'] = $this->username;
 
 		$this->lastRequest = $params;
 
