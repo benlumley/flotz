@@ -63,8 +63,8 @@ class Textlocal {
             $params['apiKey'] = $this->apiKey;
         } else{
         	$params['hash'] = $this->hash;
-        	$params['username'] = $this->username;
         }
+        $params['username'] = $this->username;
 
 		$this->lastRequest = $params;
 
